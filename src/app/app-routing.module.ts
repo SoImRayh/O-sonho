@@ -9,7 +9,6 @@ import { DestalhesAgenciaComponent } from './components/destalhes-agencia/destal
 import { GetBancoComponent } from './components/get-banco/get-banco.component';
 import { ListAgenciasComponent } from './components/list-agencias/list-agencias.component';
 import { ListbancosComponent } from './components/listbancos/listbancos.component';
-import { RemessasComponent } from './components/remessas/remessas.component';
 import { UpdateAgenciaComponent } from './components/update-agencia/update-agencia.component';
 import { UpdateBancoComponent } from './components/update-banco/update-banco.component';
 
@@ -28,7 +27,6 @@ const routes: Routes = [
   {path: 'agencias/update/:id', component: UpdateAgenciaComponent},
   {path: 'agencias/delete/:id', component: DeleteAgenciaComponent},
 
-  {path: 'remessas', component: RemessasComponent},
 ];
 
 @NgModule({
