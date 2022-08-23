@@ -1,0 +1,23 @@
+version: "3.3"
+
+services:
+
+  frontend:
+    depends_on:
+      - backend
+    container_name: frontend
+    image: imrayh/front-angular
+    volumes:
+      - angular:/app
+    ports:
+      - "80:80"
+
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 30
+
+volumes:
+  angular:
+    external: true

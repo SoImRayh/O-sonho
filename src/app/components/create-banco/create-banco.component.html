@@ -1,0 +1,26 @@
+<mat-card>
+
+  <mat-toolbar>Adicionar Banco</mat-toolbar>
+
+  <mat-card-content>
+
+    <form [formGroup]="form" class="min-width" (ngSubmit)="onSubmit()">
+      <div>
+         <mat-form-field class="full-width ">
+            <input matInput placeholder="Nome" type="text" id="InputNome" name="nome" formControlName="nome" required>
+          </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="full-width">
+
+          <input matInput placeholder="Numero" type="text" id="Input" name="numero" formControlName="numero" required>
+        </mat-form-field>
+      </div>
+        <mat-card-actions>
+          <button [disabled]="form.invalid" mat-raised-button color="primary"  type="submit">Adicionar</button>
+          <button mat-raised-button (click)="onCancel()">Cancelar</button>
+        </mat-card-actions>
+      </form>
+    </mat-card-content>
+
+  </mat-card>

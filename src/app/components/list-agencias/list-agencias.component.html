@@ -1,0 +1,90 @@
+<div class="content">
+  <div class="mat-elevation-z8">
+
+    <mat-form-field>
+      <mat-label style="color: #212121;">Filtro</mat-label>
+      <input matInput placeholder="Filtro" (keyup)="Filterchange($event)">
+    </mat-form-field>
+
+      <table mat-table matSort [dataSource]="dataSource">
+
+        <ng-container matColumnDef="id">
+          <th mat-header-cell mat-sort-header *matHeaderCellDef> Id </th>
+          <td mat-cell *matCellDef="let agencias"> {{ agencias.id }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="nome_agencia">
+          <th mat-header-cell mat-sort-header *matHeaderCellDef> Agencia </th>
+          <td mat-cell *matCellDef="let agencias"> {{ agencias.nome_agencia }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="agencia" >
+          <th mat-header-cell mat-sort-header *matHeaderCellDef> Agencia Numero </th>
+          <td mat-cell *matCellDef="let agencias "> {{ agencias.agencia }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="endereco" >
+          <th mat-header-cell mat-sort-header *matHeaderCellDef> Endereco </th>
+          <td mat-cell *matCellDef="let agencias "> {{ agencias.endereco }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Agencia Numero" >
+          <th mat-header-cell mat-sort-header *matHeaderCellDef> Numero </th>
+          <td mat-cell *matCellDef="let agencias "> {{ agencias.agencia }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="banco_id">
+          <th mat-header-cell mat-sort-header *matHeaderCellDef> Banco </th>
+          <td mat-cell *matCellDef="let agencias "> {{ agencias.banco_id }} </td>
+        </ng-container>
+
+        <!-- <mat-option *ngFor="let util of utils" [value]="util.id">
+          {{util.nome}}
+        </mat-option> -->
+
+        <ng-container matColumnDef="actions">
+          <mat-header-cell *matHeaderCellDef>
+            <button mat-raised-button color="primary" aria-label="Adicionar Agencia" (click)="onAdd()">
+              Adicionar nova Agencia
+            </button>
+          </mat-header-cell>
+
+          <mat-cell *matCellDef="let agencias">
+            <button mat-icon-button color="primary" aria-label="Detalhes Agencia">
+              <mat-icon (click)="onDetails(agencias.id)">visibility</mat-icon>
+            </button>
+
+            <button mat-icon-button color="primary" aria-label="Editar Agencia">
+              <mat-icon (click)="onUpdate(agencias.id)">edit</mat-icon>
+            </button>
+
+            <button mat-icon-button color="warn" aria-label="Remover Agencia">
+              <mat-icon (click)="onDelete(agencias.id)" >delete</mat-icon>
+            </button>
+
+          </mat-cell>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+      </table>
+      <mat-paginator [pageSizeOptions]="[10, 20]" showFirstLastButtons>
+      </mat-paginator>
+  </div>
+</div>
+
+<!--
+<div *ngFor="let banco of bancos">
+  <ng-container   matColumnDef="teste">
+    <mat-header-cell *matHeaderCellDef>
+      <button mat-raised-button class="container-button" (click) = "update(banco.id)">update</button>
+    </mat-header-cell>
+
+    <mat-cell >
+      <button mat-raised-button class="container-button" (click) = "details(banco.id)">detalhes</button>
+
+      <button mat-raised-button class="container-button" (click)= "deleteBank(banco.id)">apagar</button>
+    </mat-cell>
+  </ng-container>
+</div> -->

@@ -1,0 +1,25 @@
+
+<mat-card>
+  <mat-card-content>
+    <mat-card-title style="text-align: center;">Detalhes da Agencia</mat-card-title>
+      <div style="text-align: center;">
+          <h2>Nome da Agencia<br> <h4>{{agencia.nome_agencia}}</h4></h2>
+          <h2>Numero da Agencia<br><h4>{{agencia.agencia}}</h4></h2>
+          <h2>Endereco<br><h4>{{agencia.endereco}}</h4></h2>
+          <h2>Numero do Banco<br><h4>{{agencia.banco_id}}</h4></h2>
+          <h2>Tipo do telefone 1<br><h4>{{agencia.tipo}}</h4></h2>
+          <h2>Telefone 1<br><h4>{{agencia.fone}}</h4></h2>
+          <h2>Tipo do telefone 2<br><h4>{{agencia.tipo1}}</h4></h2>
+          <h2>Telefone 2<br><h4>{{agencia.fone1}}</h4></h2>
+      </div>
+        <mat-form-field class="full-width">
+
+        </mat-form-field>
+      <mat-card-actions style="text-align: center;">
+        <button mat-raised-button (click)="editaragencia(agencia.id)" color="primary">Editar Agencia</button>
+
+        <button mat-raised-button (click)="onCancel()">Voltar</button>
+      </mat-card-actions>
+  </mat-card-content>
+
+</mat-card>

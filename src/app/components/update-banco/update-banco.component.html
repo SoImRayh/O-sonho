@@ -1,0 +1,26 @@
+<mat-card>
+
+  <mat-toolbar>Atualizar Banco</mat-toolbar>
+
+  <mat-card-content>
+
+    <form [formGroup]="form" class="min-width" (ngSubmit)="onSubmit()">
+      <div>
+         <mat-form-field class="full-width ">
+            <input matInput placeholder="{{nome}}" type="text" id="InputNome" name="nome" [(ngModel)] = "updated.nome" formControlName="nome">
+          </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="full-width">
+
+          <input matInput placeholder="{{numero}}" type="text" id="Input" name="numero" [(ngModel)] = "updated.numero" formControlName="numero">
+        </mat-form-field>
+      </div>
+        <mat-card-actions>
+          <button [disabled]="form.invalid" mat-raised-button color="primary"  type="submit">Adicionar</button>
+          <button mat-raised-button (click)="onCancel()">Cancelar</button>
+        </mat-card-actions>
+      </form>
+  </mat-card-content>
+
+</mat-card>

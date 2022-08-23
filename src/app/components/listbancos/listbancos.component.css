@@ -1,0 +1,42 @@
+.content {
+  display: block;
+  margin: 22px auto 10px;
+  max-width: 960px;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.container-button{
+  margin-left: 6px;
+}
+
+table {
+  width: 100%;
+}
+
+.fill-espace{
+  flex: 1 1 auto
+}
+
+
+.loading-spinner {
+  background: rgba(0, 0,0 , 0.15);
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.demo-table {
+  width: 100%;
+}
+
+
+.mat-row:hover .mat-cell {
+  border-color: currentColor;
+}
+
+.demo-row-is-clicked {
+  font-weight: bold;
+}

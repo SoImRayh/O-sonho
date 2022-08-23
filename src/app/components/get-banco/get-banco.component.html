@@ -1,0 +1,19 @@
+
+<mat-card>
+  <mat-card-content>
+    <mat-card-title style="text-align: center;">Detalhes do Banco</mat-card-title>
+      <div style="text-align: center;">
+          <h2>Nome do Banco<br> <h4>{{banco.nome}}</h4></h2>
+          <h2>Numero<br><h4>{{banco.numero}}</h4></h2>
+      </div>
+        <mat-form-field class="full-width">
+
+        </mat-form-field>
+      <mat-card-actions style="text-align: center;">
+        <button mat-raised-button (click)="editarbanco(banco.id)" color="primary">Editar Banco</button>
+
+        <button mat-raised-button (click)="onCancel()">Voltar</button>
+      </mat-card-actions>
+  </mat-card-content>
+
+</mat-card>
